@@ -1,26 +1,118 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import styled from "styled-components";
+import ResizableTable, { IHeaderData } from "./components/ResizableTable";
+const resizableTableHeader: IHeaderData[] = [
+  {
+    element: "A",
+  },
+  { element: "B" },
+  { element: "C" },
+];
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <S.TableContainer>
+        <ResizableTable headers={resizableTableHeader}>
+          <tr>
+            <ResizableTable.Td>
+              <span>1</span>
+            </ResizableTable.Td>
+            <ResizableTable.Td>
+              <span>2</span>
+            </ResizableTable.Td>
+            <ResizableTable.Td>
+              <span>3</span>
+            </ResizableTable.Td>
+          </tr>
+          <tr>
+            <ResizableTable.Td>
+              <span>1</span>
+            </ResizableTable.Td>
+            <ResizableTable.Td>
+              <span>2</span>
+            </ResizableTable.Td>
+            <ResizableTable.Td>
+              <span>3</span>
+            </ResizableTable.Td>
+          </tr>
+          <tr>
+            <ResizableTable.Td>
+              <span>1</span>
+            </ResizableTable.Td>
+            <ResizableTable.Td>
+              <span>2</span>
+            </ResizableTable.Td>
+            <ResizableTable.Td>
+              <span>3</span>
+            </ResizableTable.Td>
+          </tr>
+          <tr>
+            <ResizableTable.Td>
+              <span>1</span>
+            </ResizableTable.Td>
+            <ResizableTable.Td>
+              <span>2</span>
+            </ResizableTable.Td>
+            <ResizableTable.Td>
+              <span>3</span>
+            </ResizableTable.Td>
+          </tr>
+          <tr>
+            <ResizableTable.Td>
+              <span>1</span>
+            </ResizableTable.Td>
+            <ResizableTable.Td>
+              <span>2</span>
+            </ResizableTable.Td>
+            <ResizableTable.Td>
+              <span>3</span>
+            </ResizableTable.Td>
+          </tr>
+          <tr>
+            <ResizableTable.Td>
+              <span>1</span>
+            </ResizableTable.Td>
+            <ResizableTable.Td>
+              <span>2</span>
+            </ResizableTable.Td>
+            <ResizableTable.Td>
+              <span>3</span>
+            </ResizableTable.Td>
+          </tr>
+          <tr>
+            <ResizableTable.Td>
+              <span>1</span>
+            </ResizableTable.Td>
+            <ResizableTable.Td>
+              <span>2</span>
+            </ResizableTable.Td>
+            <ResizableTable.Td>
+              <span>3</span>
+            </ResizableTable.Td>
+          </tr>
+          <tr>
+            <ResizableTable.Td>
+              <span>1</span>
+            </ResizableTable.Td>
+            <ResizableTable.Td>
+              <span>2</span>
+            </ResizableTable.Td>
+            <ResizableTable.Td>
+              <span>3</span>
+            </ResizableTable.Td>
+          </tr>
+        </ResizableTable>
+      </S.TableContainer>
     </div>
   );
 }
+
+const S = {
+  TableContainer: styled.div`
+    display: flex;
+    margin-top: 100px;
+  `,
+};
 
 export default App;
