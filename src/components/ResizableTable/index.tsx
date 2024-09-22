@@ -283,7 +283,7 @@ export default function ResizableTable({
         headers={verifiedHeaders}
         checkBox={checkBox}
         exceptColumn={exceptColumn}
-        activeIndex={activeIndex}
+        $activeIndex={activeIndex}
       >
         {columns.map(({ ref, headerData }, columnIndex) => {
           // eslint-disable-next-line array-callback-return
@@ -377,7 +377,7 @@ const S = {
     headers: IHeaderData[];
     checkBox?: React.ReactNode;
     exceptColumn?: string;
-    activeIndex: number | null;
+    $activeIndex: number | null;
   }>`
     display: grid;
     max-height: 678px;
@@ -401,7 +401,7 @@ const S = {
       border-radius: 10px;
     }
     ${(props) =>
-      (props.activeIndex === 0 || !!props.activeIndex) &&
+      (props.$activeIndex === 0 || !!props.$activeIndex) &&
       css`
         -webkit-user-select: none;
         -moz-user-select: none;
